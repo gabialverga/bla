@@ -108,6 +108,14 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/blk-design-system-angular",
+            "netlifyToken": "3d8f3edb2f1ebb877a9e56fc5912d645292b263a65d247c4abe50dc2f47e325a",
+            "siteId": "a6109633-4202-4e8a-b007-10cf7d8b6d70"
+          }
         }
       }
     },

@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     }
   }
   ngOnInit() {
-    this.champService.setChamps(["a","b","c"]);
+    this.champService.setChamps();
     this.onWindowScroll(event);
   }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import championsID from '../../assets/champions.json';
+// import championsID from '../../assets/champions.json';
+import { Champions } from '../../assets/champions';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { from } from 'rxjs';
 
@@ -23,8 +24,8 @@ export class ChampionsService {
     return this.champs;
   }
 
-  setChamps(l) {
-    this.champs = championsID;
+  setChamps() {
+    this.champs = Champions.CHAMPIONS;
   }
 
   getBusca() {
