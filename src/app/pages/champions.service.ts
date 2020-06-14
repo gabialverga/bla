@@ -8,8 +8,6 @@ import { from } from 'rxjs';
   providedIn: 'root'
 })
 export class ChampionsService {
-  // private dataSource = new BehaviorSubject<string>(null);
-  // data = this.dataSource.asObservable();
 
   private champs = null;
   private busca = {
