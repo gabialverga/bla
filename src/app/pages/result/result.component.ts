@@ -35,9 +35,10 @@ export class ResultComponent implements OnInit, OnDestroy {
       for (let i = 0; i < this.busca.champs.length; i++) {
         console.log(this.busca.champs[i]);
         this.checkFinish.push(false);
+        this.result.push({});
         this.champService.getDataChampion(this.patch, this.busca.champs[i].champion, this.busca.champs[i].lane, this.busca.queue, this.busca.region, 15)
           .then((resp: any) => {
-            this.result.push(resp);
+            this.result[i] = resp;
             this.checkFinish[i] = true;
           });
       }
@@ -60,16 +61,7 @@ export class ResultComponent implements OnInit, OnDestroy {
   getChampIcon(id) {
     for (let champ in this.champions) {
       if (this.champions[champ].id == id) {
-        //"https://cdn.op.lol/v/10.10.3208608/img/championtiles/Aatrox.jpg
         return "https://cdn.op.lol/v/" + this.patch + "/img/championtiles/" + this.champions[champ].icon;
-      }
-    }
-  }
-
-  getLaneIcon(id) {
-    for (let lane in this.lanes) {
-      if (this.lanes[lane].id == id) {
-        return "https://cdn.op.lol/v/" + this.patch + "/img/championtiles/" + this.champions[lane].icon;
       }
     }
   }
@@ -83,7 +75,6 @@ export class ResultComponent implements OnInit, OnDestroy {
   }
 
   checkAllOk() {
-    console.log("Opa");
     let ok = true;
     this.checkFinish.forEach(e => ok = (ok && e));
     if (this.checkFinish.length < this.busca.champs.length || !ok) return false;
