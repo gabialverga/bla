@@ -1,0 +1,16 @@
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    overflow: auto;
+}
+
+.w-Td {
+    min-width: 150px !important;
+}
+
+table, td, th {
+    border: 1px solid rgba(82,95,127,0.7);
+}
