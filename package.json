@@ -74,11 +74,15 @@
     "@angular/router": "9.0.6",
     "chart.js": "2.8.0",
     "core-js": "3.2.1",
+    "file-saver": "^2.0.2",
+    "js-xlsx-map": "^0.10.3",
     "jw-bootstrap-switch-ng2": "2.0.5",
     "ngx-bootstrap": "5.1.2",
     "nouislider": "11.1.0",
     "rxjs": "6.5.4",
     "tslib": "1.11.1",
+    "xls-write": "^1.0.7",
+    "xlsx": "^0.16.3",
     "zone.js": "0.10.2"
   },
   "devDependencies": {
